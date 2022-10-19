@@ -17,10 +17,12 @@ export const MainSingUp = styled.main`
 
 export const Form = styled.form`
 
-    display: flex;
-    flex-direction: column;
     margin-top: 35px;
-    
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+    }
     input{
         width: 303px;
         height: 45px;
@@ -42,6 +44,7 @@ export const Form = styled.form`
         font-size: 20px;
         color: white;
         margin-block: 5px;
+        position: relative;
 
     }
 `;

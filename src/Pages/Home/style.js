@@ -15,9 +15,12 @@ export const HomeMain = styled.div`
 
 export const Form = styled.form`
 
-    display: flex;
-    flex-direction: column;
     margin-top: 35px;
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+    }
     
     input{
         width: 303px;
@@ -40,6 +43,7 @@ export const Form = styled.form`
         font-size: 20px;
         color: white;
         margin-block: 5px;
+        position: relative;
 
     }
 `;

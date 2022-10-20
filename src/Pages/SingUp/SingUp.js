@@ -86,7 +86,7 @@ export default function SingUp() {
                     <button type="submit">{buttom}</button>
                 </fieldset>
             </Form>
-            <a href="/">Já tem uma conta? Faça login!</a>
+            <h1 onClick={()=>navigate('/')}>Já tem uma conta? Faça login!</h1>
         </MainSingUp >
     );
 }

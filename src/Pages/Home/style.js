@@ -7,8 +7,13 @@ export const HomeMain = styled.div`
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    a{
+    h1{
         margin-top: 10px;
+        font-weight: 400;
+        font-size: 13.976px;
+        text-decoration-line: underline;
+        color: #52B6FF;
+        cursor: pointer;
     }
 `;
 
@@ -44,6 +49,7 @@ export const Form = styled.form`
         color: white;
         margin-block: 5px;
         position: relative;
+        cursor: pointer;
 
     }
 `;

@@ -69,7 +69,7 @@ export default function Home() {
                 </fieldset>
             </Form>
 
-            <a href="/cadastro">Não tem uma conta? Cadastre-se!</a>
+            <h1 onClick={()=>navigate('/cadastro')}>Não tem uma conta? Cadastre-se!</h1>
         </HomeMain>
     );
 }

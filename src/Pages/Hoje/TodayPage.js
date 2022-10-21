@@ -1,6 +1,5 @@
 import FooterBar from "../../Components/Footer";
 import Header from "../../Components/Header";
-import { useAuth } from "../../provider/auth";
 import BoardToday from "./BoardToday";
 import { MainToday, SubString } from "./style";
 

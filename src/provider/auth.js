@@ -9,7 +9,7 @@ export const AuthProvider = (props) => {
     const [user, setUser] = useState(
         {token:''}
     )
-
+    
     return (
         <AuthContext.Provider value={{ user, setUser }}>
             {props.children}

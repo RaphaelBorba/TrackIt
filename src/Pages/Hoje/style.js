@@ -1,4 +1,4 @@
-import styled, { ServerStyleSheet } from "styled-components";
+import styled from "styled-components";
 
 
 export const MainToday = styled.main`

@@ -13,10 +13,13 @@ export const HistoricoMain = styled.main`
 
 
 export const SubStringH = styled.div`
-    margin: 100px 0 0 20px;
+    
+    margin: 100px auto;
+    padding-inline: 10px;
+    min-width: 350px;
+    height: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: start;
     flex-direction: column;
     position: relative;
 

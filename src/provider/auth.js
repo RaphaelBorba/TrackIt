@@ -9,9 +9,12 @@ export const AuthProvider = (props) => {
     const [user, setUser] = useState(
         {token:''}
     )
+
+    const [porc, setPorc] = useState(0)
+    
     
     return (
-        <AuthContext.Provider value={{ user, setUser }}>
+        <AuthContext.Provider value={{ user, setUser, porc, setPorc}}>
             {props.children}
         </AuthContext.Provider>
     );

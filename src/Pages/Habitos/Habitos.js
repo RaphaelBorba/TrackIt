@@ -102,13 +102,13 @@ export default function Habitos() {
                             required
                         />
                         <nav>
-                            <ButDays day={1} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(1)}>D</ButDays>
-                            <ButDays day={2} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(2)}>S</ButDays>
-                            <ButDays day={3} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(3)}>T</ButDays>
+                            <ButDays day={0} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(0)}>D</ButDays>
+                            <ButDays day={1} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(1)}>S</ButDays>
+                            <ButDays day={2} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(2)}>T</ButDays>
+                            <ButDays day={3} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(3)}>Q</ButDays>
                             <ButDays day={4} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(4)}>Q</ButDays>
-                            <ButDays day={5} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(5)}>Q</ButDays>
+                            <ButDays day={5} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(5)}>S</ButDays>
                             <ButDays day={6} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(6)}>S</ButDays>
-                            <ButDays day={7} arrayDaysN={arrayDaysN} onClick={() => addDayHabit(7)}>S</ButDays>
                         </nav>
                         <span onClick={() => cancelForm()}>Cancelar</span>
                         <button type="submit">Salvar</button>

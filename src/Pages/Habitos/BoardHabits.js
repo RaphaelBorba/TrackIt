@@ -37,13 +37,13 @@ export default function BoardHabits({ del, setDel, arrayHabits, setArrayHabits }
                     <h1>{a.name}</h1>
                     <ion-icon onClick={() => deleteHabit(a.id)} name="trash-outline"></ion-icon>
                     <div>
-                        <ButDays arrayDaysN={a.days} day={1}>D</ButDays>
-                        <ButDays arrayDaysN={a.days} day={2}>S</ButDays>
-                        <ButDays arrayDaysN={a.days} day={3}>T</ButDays>
+                        <ButDays arrayDaysN={a.days} day={0}>D</ButDays>
+                        <ButDays arrayDaysN={a.days} day={1}>S</ButDays>
+                        <ButDays arrayDaysN={a.days} day={2}>T</ButDays>
+                        <ButDays arrayDaysN={a.days} day={3}>Q</ButDays>
                         <ButDays arrayDaysN={a.days} day={4}>Q</ButDays>
-                        <ButDays arrayDaysN={a.days} day={5}>Q</ButDays>
+                        <ButDays arrayDaysN={a.days} day={5}>S</ButDays>
                         <ButDays arrayDaysN={a.days} day={6}>S</ButDays>
-                        <ButDays arrayDaysN={a.days} day={7}>S</ButDays>
                     </div>
                 </HabitCard>);
             })}

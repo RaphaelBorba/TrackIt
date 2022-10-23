@@ -5,13 +5,13 @@ import FooterBar from "../../Components/Footer";
 import Header from "../../Components/Header";
 import { useAuth } from "../../provider/auth";
 import BoardToday from "./BoardToday";
+import calcPorc from "./calcPorc";
 import { MainToday, SubString } from "./style";
-
 
 
 export default function TodayPage() {
 
-    const { user, porc } = useAuth()
+    const { user, porc, setPorc } = useAuth()
 
     const semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
     const d = new Date();
@@ -31,8 +31,18 @@ export default function TodayPage() {
         axios.get(`${url}habits/today`, config)
             .then((e) => {
                 setTodayHabits(e.data)
+                let check =0
+                let total=0
+                e.data.forEach((a)=>{
+                    total++
+                    if(a.done){
+                        check++
+                    }
+                    setPorc({total, check})
+                })
             })
-            .catch((e) => e.response.data)
+            .catch((e) => alert(e.response.data.message))
+        // eslint-disable-next-line
     }, [onCheck])
 
 
@@ -43,7 +53,9 @@ export default function TodayPage() {
 
             <SubString>
                 <h1>{semana[d.getDay()] + ', ' + myDate.slice(0, 5)}</h1>
-                <h2>{(porc)?'67% dos hábitos concluídos':'Nenhum hábito concluído ainda'}</h2>
+                <h2 
+                style={(porc.check)?{color:'#8FC549'}:{color:'#BABABA'}}
+                >{(porc.check)?`${Math.round(calcPorc(porc.total, porc.check))}% dos hábitos concluídos`:'Nenhum hábito concluído ainda'}</h2>
             </SubString>
 
             <BoardToday setOnCheck={setOnCheck} onCheck={onCheck} todayHabits={todayHabits} />

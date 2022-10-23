@@ -2,7 +2,7 @@ import axios from "axios";
 import { url } from "../../Assets/images/ImgUrl";
 import { useAuth } from "../../provider/auth";
 import Cards from "./Card";
-import { Board, Card } from "./style";
+import { Board } from "./style";
 
 
 
@@ -16,6 +16,9 @@ export default function BoardToday({ onCheck, setOnCheck, todayHabits }) {
         }
     }
 
+
+
+    
     function checkUncheckHabit(id, done) {
 
         if (done) {
@@ -31,8 +34,6 @@ export default function BoardToday({ onCheck, setOnCheck, todayHabits }) {
         }
 
     }
-
-    console.log(todayHabits)
 
     return (
 

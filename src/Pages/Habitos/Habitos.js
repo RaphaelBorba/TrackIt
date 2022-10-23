@@ -31,10 +31,9 @@ export default function Habitos() {
         axios.get(`${url}habits`, config)
             .then((e) => {
                 setArrayHabits(e.data)
-                console.log(e.data)
             })
             .catch((e) => {
-                console.log(e.response)
+                alert(e.response.data.message)
             })
 
         // eslint-disable-next-line
@@ -44,11 +43,9 @@ export default function Habitos() {
     function addDayHabit(dayN) {
         if (arrayDaysN.includes(dayN)) {
             let arr = arrayDaysN.filter((a) => a !== dayN)
-            console.log(arr)
             setArrayDaysN(arr)
         } else {
             let arr = [...arrayDaysN, dayN]
-            console.log(arr)
             setArrayDaysN(arr)
         }
     }
@@ -68,7 +65,7 @@ export default function Habitos() {
                 .then((e) => {
                     cancelForm()
                 })
-                .catch((e) => console.log(e.response));
+                .catch((e) => alert(e.response.data.message));
 
         }
     }

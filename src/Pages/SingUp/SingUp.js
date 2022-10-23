@@ -32,7 +32,6 @@ export default function SingUp() {
 
         axios.post(`${url}auth/sign-up`, form)
             .then((e) => {
-                console.log(e.data)
                 navigate('/')
             })
             .catch((e) => {

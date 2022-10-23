@@ -10,8 +10,10 @@ export const AuthProvider = (props) => {
         {token:''}
     )
 
-    const [porc, setPorc] = useState(0)
-    
+    const [porc, setPorc] = useState(
+        {total:0,
+         check:0}
+    )
     
     return (
         <AuthContext.Provider value={{ user, setUser, porc, setPorc}}>

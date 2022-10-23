@@ -2,18 +2,22 @@ import styled from "styled-components";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../provider/auth";
+import calcPorc from "../Pages/Hoje/calcPorc";
 
 
 
 export default function FooterBar() {
 
     const navigate = useNavigate()
+    const {porc} = useAuth()
+
 
     return (
         <FooterDiv>
             <h1 onClick={()=>navigate('/habitos')}>Hábitos</h1>
             <div onClick={()=>navigate('/hoje')}><CircularProgressbar
-                value={50}
+                value={Math.round(calcPorc(porc.total, porc.check))}
                 text='Hoje'
                 background
                 backgroundPadding={6}
